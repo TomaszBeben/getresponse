@@ -5,9 +5,9 @@ import styled from 'styled-components'
 import Content from '../content/Content'
 import Navigation from '../navigation/Navigation'
 
-const MainContainer = styled.div`
-  width: 600px;
-  height: 500px;
+const MainContainer = styled.div `
+  width: 200px;
+  height: 200px;
   border: 1px solid black;
 `
 

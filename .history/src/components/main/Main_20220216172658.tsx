@@ -6,13 +6,13 @@ import Content from '../content/Content'
 import Navigation from '../navigation/Navigation'
 
 const MainContainer = styled.div`
-  width: 600px;
-  height: 500px;
-  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black
 `
 
-const Main = () => {
 
+const Main = () => {
   return (
     <MainContainer>
         <Navigation/>
