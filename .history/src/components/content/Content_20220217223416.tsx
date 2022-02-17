@@ -1,21 +1,15 @@
 import React, { FC } from 'react'
 import { TPosts } from '../../types/TPosts'
-import { POSTS_PER_PAGE } from '../../utils/constants'
 
 type props = {
   posts: TPosts[];
-  page: number;
 }
 
-const Content: FC<props> = ({ posts, page }) => {
-  const startIndex: number = ( page -1 ) * POSTS_PER_PAGE;
-  const selectedPosts: TPosts[] = posts.slice(startIndex, startIndex * POSTS_PER_PAGE)
-
-  console.log(POSTS_PER_PAGE, selectedPosts);
+const Content: FC<props> = ({ posts }) => {
   return (
     <div>
       {
-        selectedPosts.map((elem) => {
+        posts.map((elem) => {
           return (
             <ul key={elem.id}>
               <li>

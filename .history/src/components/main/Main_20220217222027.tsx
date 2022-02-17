@@ -1,7 +1,6 @@
 import React, {useState, useEffect, Dispatch, SetStateAction} from 'react'
 
 import styled from 'styled-components'
-import { fetchData } from '../../api/fetchData'
 import { TPosts } from '../../types/TPosts'
 
 import Content from '../content/Content'
@@ -17,18 +16,10 @@ const MainContainer = styled.div`
 const Main = () => {
   const defaultState: TPosts[] = [];
   const [posts, setPosts] = useState <TPosts[]> (defaultState)
-  const [error, setError] = useState <string> ('')
-  const [page, setPage] = useState <number> (1)
-
-  useEffect(()=>{
-    fetchData(setPosts, setError)
-  }, [])
-
-  console.log(posts);
   return (
     <MainContainer>
         <Navigation/>
-        <Content posts={posts} page={page}/>
+        <Content/>
     </MainContainer>
   )
 }

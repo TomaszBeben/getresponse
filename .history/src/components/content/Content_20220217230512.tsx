@@ -6,7 +6,7 @@ type props = {
   posts: TPosts[];
   page: number;
 }
-
+// 
 const Content: FC<props> = ({ posts, page }) => {
   const startIndex: number = ( page -1 ) * POSTS_PER_PAGE;
   const selectedPosts: TPosts[] = posts.slice(startIndex, startIndex * POSTS_PER_PAGE)

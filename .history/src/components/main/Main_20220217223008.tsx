@@ -17,8 +17,7 @@ const MainContainer = styled.div`
 const Main = () => {
   const defaultState: TPosts[] = [];
   const [posts, setPosts] = useState <TPosts[]> (defaultState)
-  const [error, setError] = useState <string> ('')
-  const [page, setPage] = useState <number> (1)
+  const [error, setError] = useState < string > ('')
 
   useEffect(()=>{
     fetchData(setPosts, setError)
@@ -28,7 +27,7 @@ const Main = () => {
   return (
     <MainContainer>
         <Navigation/>
-        <Content posts={posts} page={page}/>
+        <Content posts/>
     </MainContainer>
   )
 }
