@@ -16,14 +16,13 @@ const NavigationContainer = styled.div`
 type props = {
   pageBackward: () => void;
   pageForward: () => void;
-  page: number;
 }
 
-const Navigation:FC<props> = ({pageBackward, pageForward, page}) => {
+const Navigation:FC<props> = ({pageBackward, pageForward}) => {
   return (
     <NavigationContainer>
       <div>left</div>
-      <NavigationElementCenter pageBackward={pageBackward} pageForward={pageForward} page={page}/>
+      <NavigationElementCenter pageBackward={pageBackward} pageForward={pageForward}/>
       <div>right</div>
     </NavigationContainer>
   )

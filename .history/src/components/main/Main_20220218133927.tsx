@@ -22,27 +22,24 @@ const Main = () => {
   const [totalPages, setTotalPages] = useState < number > (0)
   const [page, setPage] = useState < number > (1)
 
+
+
   useEffect(() => {
     fetchData(
       setPosts,
       setError,
       setLoading,
+      setTotalPages
     )
   }, [])
 
-  useEffect(() => {
-    setTotalPages(Math.ceil(posts.length / 7))
-  }, [posts])
+  setTotalPages(Math.ceil(posts.length))
 
   const pageForward = () => {
-    page >= totalPages
-    ? setPage(1)
-    : setPage(page => page + 1)
+    setPage(page => page + 1)
   }
   const pageBackward = () => {
-    page <= 1
-    ? setPage(totalPages)
-    : setPage(page => page - 1)
+    setPage(page => page - 1)
   }
 
   return (
@@ -53,9 +50,7 @@ const Main = () => {
         page={page} />
       {
         loading
-          ? error
-            ?<p>Error</p>
-            :<p>Loading...</p>
+          ? <p>Loading...</p>
           : <Content posts={posts} page={page} />
       }
     </MainContainer>

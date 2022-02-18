@@ -31,7 +31,7 @@ const NavigationElementCenter: FC<props> = ({ pageBackward, pageForward, page })
       <NavigationElementCenterArrow onClick={pageBackward}>
         left
       </NavigationElementCenterArrow>
-      <h1>{'week ' + page}</h1>
+      <div>`${}</div>
       <NavigationElementCenterArrow onClick={pageForward}>
         right
       </NavigationElementCenterArrow>

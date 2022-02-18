@@ -1,7 +1,7 @@
 import axios from "axios";
 import { TPosts } from '../types/TPosts'
 
-const url: string = 'https://jsonplaceholder.typicode.com/posts';
+const url: string = 'https://jsonplacehoslder.typicode.com/posts';
 
 export const fetchData = (
     setPosts: (arg: TPosts[]) => void,

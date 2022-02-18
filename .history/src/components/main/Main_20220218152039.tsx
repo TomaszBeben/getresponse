@@ -40,7 +40,7 @@ const Main = () => {
     : setPage(page => page + 1)
   }
   const pageBackward = () => {
-    page <= 1
+    page <=
     ? setPage(totalPages)
     : setPage(page => page - 1)
   }
