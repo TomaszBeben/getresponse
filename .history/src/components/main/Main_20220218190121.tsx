@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { MainContainer } from './styles/styles'
+import 
 import { fetchData } from '../../api/fetchData'
 import { TPosts } from '../../types/TPosts'
 
@@ -39,19 +39,19 @@ const Main = () => {
   }
 
   return (
-    <MainContainer>
-      <Navigation
-        pageBackward={() => pageBackward()}
-        pageForward={() => pageForward()}
-        page={page} />
-      {
-        loading
-          ? <p>Loading...</p>
-          : <Content posts={posts} page={page} />
-      }
-      {error !== '' ? <h1>{error}</h1> : ''}
-    </MainContainer>
+      <MainContainer>
+        <Navigation
+          pageBackward={() => pageBackward()}
+          pageForward={() => pageForward()}
+          page={page} />
+        {
+          loading
+            ? <p>Loading...</p>
+            : <Content posts={posts} page={page} />
+        }
+        {error !== '' ? <h1>{error}</h1> : ''}
+      </MainContainer>
   )
 }
 
-export default Main
+      export default Main

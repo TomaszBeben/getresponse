@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import { Context } from '../../contexts/context'
 
-import { MainContainer } from './styles/styles'
+import styled from 'styled-components'
 import { fetchData } from '../../api/fetchData'
 import { TPosts } from '../../types/TPosts'
 
 import Content from '../content/Content'
 import Navigation from '../navigation/Navigation'
+
+const MainContainer = styled.div`
+  width: 900px;
+  height: 650px;
+  border: 1px solid black;
+  border-radius: 10px;
+`
 
 const Main = () => {
   const defaultState: TPosts[] = [];
@@ -39,19 +47,22 @@ const Main = () => {
   }
 
   return (
-    <MainContainer>
-      <Navigation
-        pageBackward={() => pageBackward()}
-        pageForward={() => pageForward()}
-        page={page} />
-      {
-        loading
-          ? <p>Loading...</p>
-          : <Content posts={posts} page={page} />
-      }
-      {error !== '' ? <h1>{error}</h1> : ''}
-    </MainContainer>
-  )
+    <Context.Provider>
+      <MainContainer>
+        <Navigation
+          pageBackward={() => pageBackward()}
+          pageForward={() => pageForward()}
+          page={page} />
+        {
+          loading
+            ? error
+              ? <p>Error</p>
+              : <p>Loading...</p>
+            : <Content posts={posts} page={page} />
+        }
+      </MainContainer>
+<Context.Provider/>
+      )
 }
 
-export default Main
+      export default Main

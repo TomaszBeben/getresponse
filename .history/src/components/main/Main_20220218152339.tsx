@@ -1,11 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
-import { MainContainer } from './styles/styles'
+import styled from 'styled-components'
 import { fetchData } from '../../api/fetchData'
 import { TPosts } from '../../types/TPosts'
 
 import Content from '../content/Content'
 import Navigation from '../navigation/Navigation'
+
+const MainContainer = styled.div`
+  width: 900px;
+  height: 650px;
+  border: 1px solid black;
+  border-radius: 10px;
+`
 
 const Main = () => {
   const defaultState: TPosts[] = [];
@@ -29,13 +36,13 @@ const Main = () => {
 
   const pageForward = () => {
     page >= totalPages
-      ? setPage(1)
-      : setPage(page => page + 1)
+    ? setPage(1)
+    : setPage(page => page + 1)
   }
   const pageBackward = () => {
     page <= 1
-      ? setPage(totalPages)
-      : setPage(page => page - 1)
+    ? setPage(totalPages)
+    : setPage(page => page - 1)
   }
 
   return (
@@ -46,10 +53,11 @@ const Main = () => {
         page={page} />
       {
         loading
-          ? <p>Loading...</p>
+          ? error
+            ?<p>Error</p>
+            :<p>Loading...</p>
           : <Content posts={posts} page={page} />
       }
-      {error !== '' ? <h1>{error}</h1> : ''}
     </MainContainer>
   )
 }
