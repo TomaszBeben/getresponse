@@ -26,20 +26,13 @@ const Main = () => {
     fetchData(setPosts, setError, setLoading)
   }, [])
 
-  const pageForward = () => {
-    setPage(page => page + 1)
-  }
-  const pageBackward = () => {
-    setPage(page => page - 1)
-  }
-
   return (
     <MainContainer>
-        <Navigation pageBackward={() => pageBackward()} pageForward={() => pageForward()} />
+        <Navigation/>
         {
           loading
           ? <p>Loading...</p>
-          : <Content posts={posts} page={page} />
+          : <Content posts={posts} page={page} loading={loading} />
         }
     </MainContainer>
   )

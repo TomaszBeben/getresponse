@@ -27,19 +27,19 @@ const Main = () => {
   }, [])
 
   const pageForward = () => {
-    setPage(page => page + 1)
+    console.log('forward');
   }
   const pageBackward = () => {
-    setPage(page => page - 1)
+    console.log('backward');
   }
 
   return (
     <MainContainer>
-        <Navigation pageBackward={() => pageBackward()} pageForward={() => pageForward()} />
+        <Navigation pageBackward={pageBackward} pageForward={pageForward} />
         {
           loading
           ? <p>Loading...</p>
-          : <Content posts={posts} page={page} />
+          : <Content posts={posts} page={page} loading={loading} />
         }
     </MainContainer>
   )

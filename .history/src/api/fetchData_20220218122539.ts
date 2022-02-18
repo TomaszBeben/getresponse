@@ -4,9 +4,10 @@ import { TPosts } from '../types/TPosts'
 const url: string = 'https://jsonplaceholder.typicode.com/posts';
 
 export const fetchData = (setPosts: (arg: TPosts[]) => void, setError: (arg: string) => void, setLoading: (arg: boolean) => void) => {
-    setLoading(true)
     axios.get(url)
         .then(({ data }) => {
+            // setLoading(true)
+            setLoading(false)
             setPosts(data)
             setError('')
             setLoading(false)

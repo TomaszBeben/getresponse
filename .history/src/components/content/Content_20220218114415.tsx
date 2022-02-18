@@ -9,11 +9,14 @@ type props = {
 
 const Content: FC<props> = ({ posts, page }) => {
   const startIndex: number = ( page - 1 ) * POSTS_PER_PAGE;
-  const selectedPosts: TPosts[] = posts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+  const selectedPosts: TPosts[] = posts.slice(startIndex, startIndex * POSTS_PER_PAGE)
 
+  console.log(startIndex);
+  console.log(POSTS_PER_PAGE, selectedPosts);
   return (
     <div>
-      {selectedPosts.map((elem) => {
+      {
+        selectedPosts.map((elem) => {
           return (
             <ul key={elem.id}>
               <li>

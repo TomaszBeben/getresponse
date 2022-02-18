@@ -26,11 +26,11 @@ const Main = () => {
     fetchData(setPosts, setError, setLoading)
   }, [])
 
-  const pageForward = () => {
-    setPage(page => page + 1)
+  const pageForward: () => void = () => {
+    console.log('forward');
   }
   const pageBackward = () => {
-    setPage(page => page - 1)
+    console.log('backward');
   }
 
   return (

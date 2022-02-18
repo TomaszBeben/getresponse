@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Dispatch, SetStateAction} from 'react'
 
 import styled from 'styled-components'
 import { fetchData } from '../../api/fetchData'
@@ -18,29 +18,16 @@ const Main = () => {
   const defaultState: TPosts[] = [];
   const [posts, setPosts] = useState <TPosts[]> (defaultState)
   const [error, setError] = useState <string> ('')
-  const [loading, setLoading] = useState <boolean> (false)
-
   const [page, setPage] = useState <number> (1)
 
   useEffect(()=>{
-    fetchData(setPosts, setError, setLoading)
+    fetchData(setPosts, setError)
   }, [])
-
-  const pageForward = () => {
-    setPage(page => page + 1)
-  }
-  const pageBackward = () => {
-    setPage(page => page - 1)
-  }
 
   return (
     <MainContainer>
-        <Navigation pageBackward={() => pageBackward()} pageForward={() => pageForward()} />
-        {
-          loading
-          ? <p>Loading...</p>
-          : <Content posts={posts} page={page} />
-        }
+        <Navigation/>
+        <Content posts={posts} page={page}/>
     </MainContainer>
   )
 }

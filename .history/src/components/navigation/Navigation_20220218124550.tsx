@@ -14,8 +14,8 @@ const NavigationContainer = styled.div`
 `
 
 type props = {
-  pageBackward: () => void;
-  pageForward: () => void;
+  pageBackward: void;
+  pageForward: void;
 }
 
 const Navigation:FC<props> = ({pageBackward, pageForward}) => {

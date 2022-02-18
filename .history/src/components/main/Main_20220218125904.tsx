@@ -27,10 +27,10 @@ const Main = () => {
   }, [])
 
   const pageForward = () => {
-    setPage(page => page + 1)
+    setPage(page++)
   }
   const pageBackward = () => {
-    setPage(page => page - 1)
+    setPage(page--)
   }
 
   return (

@@ -19,18 +19,18 @@ const NavigationElementCenterArrow = styled.button`
 `
 
 type props = {
-  pageBackward: () => void;
-  pageForward: () => void;
+  pageBackward: void;
+  pageForward: void;
 }
 
 const NavigationElementCenter: FC<props> = ({ pageBackward, pageForward }) => {
   return (
     <NavigationElementCenterContainer>
-      <NavigationElementCenterArrow onClick={pageBackward}>
+      <NavigationElementCenterArrow onClick={pageBackward()}>
         left
       </NavigationElementCenterArrow>
       <div>Week 1</div>
-      <NavigationElementCenterArrow onClick={pageForward}>
+      <NavigationElementCenterArrow onClick={pageForward()}>
         right
       </NavigationElementCenterArrow>
     </NavigationElementCenterContainer>

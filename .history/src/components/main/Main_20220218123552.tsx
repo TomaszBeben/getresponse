@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Dispatch, SetStateAction} from 'react'
 
 import styled from 'styled-components'
 import { fetchData } from '../../api/fetchData'
@@ -26,20 +26,13 @@ const Main = () => {
     fetchData(setPosts, setError, setLoading)
   }, [])
 
-  const pageForward = () => {
-    setPage(page => page + 1)
-  }
-  const pageBackward = () => {
-    setPage(page => page - 1)
-  }
-
   return (
     <MainContainer>
-        <Navigation pageBackward={() => pageBackward()} pageForward={() => pageForward()} />
+        <Navigation/>
         {
           loading
           ? <p>Loading...</p>
-          : <Content posts={posts} page={page} />
+          : <Content posts={posts} page={page} loading={loading} />
         }
     </MainContainer>
   )

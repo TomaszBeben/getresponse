@@ -19,8 +19,8 @@ const NavigationElementCenterArrow = styled.button`
 `
 
 type props = {
-  pageBackward: () => void;
-  pageForward: () => void;
+  pageBackward: void;
+  pageForward: void;
 }
 
 const NavigationElementCenter: FC<props> = ({ pageBackward, pageForward }) => {

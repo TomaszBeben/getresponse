@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import React from 'react'
 
 import styled from 'styled-components';
 
@@ -19,18 +19,18 @@ const NavigationElementCenterArrow = styled.button`
 `
 
 type props = {
-  pageBackward: () => void;
-  pageForward: () => void;
+  pageBackward: void;
+  pageForward: void;
 }
 
-const NavigationElementCenter: FC<props> = ({ pageBackward, pageForward }) => {
+const NavigationElementCenter = ({}) => {
   return (
     <NavigationElementCenterContainer>
-      <NavigationElementCenterArrow onClick={pageBackward}>
+      <NavigationElementCenterArrow onClick={()=> pageBackward()}>
         left
       </NavigationElementCenterArrow>
       <div>Week 1</div>
-      <NavigationElementCenterArrow onClick={pageForward}>
+      <NavigationElementCenterArrow onClick={()=> pageForward()}>
         right
       </NavigationElementCenterArrow>
     </NavigationElementCenterContainer>

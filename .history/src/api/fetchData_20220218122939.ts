@@ -2,11 +2,12 @@ import axios from "axios";
 import { TPosts } from '../types/TPosts'
 
 const url: string = 'https://jsonplaceholder.typicode.com/posts';
+const url: string = 'https://jsonplaceholder.typicode.cm/posts';
 
 export const fetchData = (setPosts: (arg: TPosts[]) => void, setError: (arg: string) => void, setLoading: (arg: boolean) => void) => {
-    setLoading(true)
     axios.get(url)
         .then(({ data }) => {
+            setLoading(true)
             setPosts(data)
             setError('')
             setLoading(false)

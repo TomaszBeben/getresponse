@@ -27,10 +27,10 @@ const Main = () => {
   }, [])
 
   const pageForward = () => {
-    setPage(page => page + 1)
+    console.log('forward');
   }
   const pageBackward = () => {
-    setPage(page => page - 1)
+    console.log('backward');
   }
 
   return (
