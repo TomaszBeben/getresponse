@@ -39,7 +39,9 @@ export const MainContent = styled.li`
 `
 
 export const UL = styled.ul`
-width: ${px2vw(120)};
+width: 100%;
+@media (min-width: 1024px) {
+    width: ${px2vw(1024)};
 `
 // export const Grid = styled.li`
 //   display: grid;

@@ -45,7 +45,7 @@ export const NavigationElementCenterContainer = styled.div`
 
 export const NavigationElementCenterArrow = styled.button`
     width: ${px2vw(40)};
-    height: ${px2vw(80)}
+    height: ${px2vw(100)}
 `
 // export const NavigationElementCenterArrow = styled.button`
 //     width: 4rem;

@@ -7,8 +7,8 @@ export const MainContainer = styled.div`
   width: ${px2vw(320, 320)};
   min-height: ${px2vw(200, 320)};
   flex-direction: column;
-  padding: ${px2vw(20)};
-  margin: ${px2vw(20)};
+  /* padding: ${px2vw(20)}; */
+  /* margin: ${px2vw(20)}; */
   background-color: ${globalStyle.backgroundColorMain};
   height: 100%;
 

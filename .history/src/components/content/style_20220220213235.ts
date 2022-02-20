@@ -3,19 +3,14 @@ import { globalStyle } from '../../styles/globalStyles';
 import { px2vw } from '../utils/px2vw';
 
 export const ListOfContentContainer = styled.div`
-    width: 100%;
-    /* width: ${px2vw(70, 320)}; */
+    width: ${px2vw(70, 320)};
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
 
     @media (min-width: 1024px) {
-    width: ${px2vw(1024)};
-    display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    height: 100%;
   }
 `
 // export const ListOfContentContainer = styled.div`
@@ -31,15 +26,8 @@ export const ListOfContentContainer = styled.div`
 //     grid-template-rows: 50px;
 // `;
 
-export const MainContent = styled.li`
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-`
+export const Grid = styled.li`
 
-export const UL = styled.ul`
-width: ${px2vw(120)};
 `
 // export const Grid = styled.li`
 //   display: grid;
@@ -54,7 +42,7 @@ width: ${px2vw(120)};
 //   }
 // `
 
-export const ContentHoursStyle = styled(MainContent)`
+export const ContentHoursStyle = styled(Grid)`
     
 `
 // export const ContentHoursStyle = styled(Grid)`
@@ -78,10 +66,7 @@ export const BorderContentElement = styled.p`
 // `
 
 export const SingleContentElement = styled(BorderContentElement)`
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+  
 `
 // export const SingleContentElement = styled(BorderContentElement)`
 //   padding-top: 1rem;

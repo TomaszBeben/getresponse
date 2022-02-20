@@ -3,8 +3,7 @@ import { globalStyle } from '../../styles/globalStyles';
 import { px2vw } from '../utils/px2vw';
 
 export const ListOfContentContainer = styled.div`
-    width: 100%;
-    /* width: ${px2vw(70, 320)}; */
+    width: ${px2vw(70, 320)};
     display: flex;
     flex-direction: column;
     flex-basis: 100%;

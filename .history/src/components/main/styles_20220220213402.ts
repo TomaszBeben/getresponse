@@ -6,15 +6,15 @@ export const MainContainer = styled.div`
   display: flex;
   width: ${px2vw(320, 320)};
   min-height: ${px2vw(200, 320)};
-  flex-direction: column;
+  flex-direction: row;
   padding: ${px2vw(20)};
   margin: ${px2vw(20)};
   background-color: ${globalStyle.backgroundColorMain};
   height: 100%;
 
   @media (min-width: 1024px) {
-    width: ${px2vw(1024)};
-    min-height: ${px2vw(700)};
+    width: ${px2vw(800)};
+    min-height: ${px2vw(300)};
     height: 100%;
   }
 `

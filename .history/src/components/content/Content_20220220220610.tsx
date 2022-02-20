@@ -6,7 +6,7 @@ import { TPosts } from '../types/TPosts'
 import { POSTS_PER_PAGE } from '../utils/constants'
 import ContentHours from './ContentHours'
 
-import { ListOfContentContainer, MainContent, SingleContentHeaderElement , SingleContentElement, UL} from './style'
+import { ListOfContentContainer, MainContent, SingleContentHeaderElement , SingleContentElement} from './style'
 
 type props = {
   posts: TPosts[];
@@ -22,7 +22,7 @@ const Content: FC<props> = ({ posts, page }) => {
       <ContentHours />
       {selectedPosts.map((elem) => {
         return (
-          <UL key={elem.id}>
+          <ul key={elem.id}>
             <MainContent>
               <SingleContentHeaderElement>{'DAY ' + elem.id}</SingleContentHeaderElement>
               <SingleContentElement>{elem.Column_1}</SingleContentElement>
@@ -32,7 +32,7 @@ const Content: FC<props> = ({ posts, page }) => {
               <SingleContentElement>{elem.Column_5}</SingleContentElement>
               <SingleContentElement>workout elem</SingleContentElement>
             </MainContent>
-          </UL>
+          </ul>
         )
       })
       }

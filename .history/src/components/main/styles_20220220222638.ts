@@ -4,7 +4,7 @@ import { globalStyle } from '../../styles/globalStyles';
 
 export const MainContainer = styled.div`
   display: flex;
-  width: ${px2vw(320, 320)};
+  width: ${px2vw(340, 320)};
   min-height: ${px2vw(200, 320)};
   flex-direction: column;
   padding: ${px2vw(20)};

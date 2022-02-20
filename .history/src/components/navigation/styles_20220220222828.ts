@@ -8,9 +8,10 @@ export const NavigationContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: ${px2vw(1024)};
+
   @media (min-width: 1024px) {
     width: ${px2vw(1024)};
-  }
 `
 // export const NavigationContainer = styled.div`
 //   width: 100%;
@@ -44,8 +45,7 @@ export const NavigationElementCenterContainer = styled.div`
 // `
 
 export const NavigationElementCenterArrow = styled.button`
-    width: ${px2vw(40)};
-    height: ${px2vw(80)}
+    
 `
 // export const NavigationElementCenterArrow = styled.button`
 //     width: 4rem;

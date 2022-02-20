@@ -19,7 +19,6 @@ export const Global = createGlobalStyle`
     background-color: ${globalStyle.backgroundColorMain};
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: 1px solid black;
-    overflow-wrap: break-word;
   }
   :root {
       font-size: ${px2vw(24)};

@@ -13,8 +13,8 @@ export const MainContainer = styled.div`
   height: 100%;
 
   @media (min-width: 1024px) {
-    width: ${px2vw(1024)};
-    min-height: ${px2vw(700)};
+    width: ${px2vw(900)};
+    min-height: ${px2vw(300)};
     height: 100%;
   }
 `

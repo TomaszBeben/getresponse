@@ -8,8 +8,10 @@ export const NavigationContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   @media (min-width: 1024px) {
-    width: ${px2vw(1024)};
+    width: ${px2vw(50)};
+    min-height: ${px2vw(40)};
   }
 `
 // export const NavigationContainer = styled.div`
@@ -31,8 +33,8 @@ export const NavigationElementCenterContainer = styled.div`
   min-height: ${px2vw(20, 320)};
 
   @media (min-width: 1024px) {
-    width: ${px2vw(300)};
-    min-height: ${px2vw(100)};
+    width: ${px2vw(800)};
+    min-height: ${px2vw(300)};
     height: 100%;
   }
 `
@@ -44,8 +46,7 @@ export const NavigationElementCenterContainer = styled.div`
 // `
 
 export const NavigationElementCenterArrow = styled.button`
-    width: ${px2vw(40)};
-    height: ${px2vw(80)}
+    
 `
 // export const NavigationElementCenterArrow = styled.button`
 //     width: 4rem;

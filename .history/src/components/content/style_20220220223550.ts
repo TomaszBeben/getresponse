@@ -3,8 +3,7 @@ import { globalStyle } from '../../styles/globalStyles';
 import { px2vw } from '../utils/px2vw';
 
 export const ListOfContentContainer = styled.div`
-    width: 100%;
-    /* width: ${px2vw(70, 320)}; */
+    width: ${px2vw(70, 320)};
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
@@ -39,7 +38,7 @@ export const MainContent = styled.li`
 `
 
 export const UL = styled.ul`
-width: ${px2vw(120)};
+width: ${px2vw(130)};
 `
 // export const Grid = styled.li`
 //   display: grid;
