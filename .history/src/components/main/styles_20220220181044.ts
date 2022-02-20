@@ -1,0 +1,30 @@
+import styled from 'styled-components';
+import { px2vw } from '../utils/px2vw';
+import { globalStyle } from '../../styles/globalStyles';
+
+export const MainContainer = styled.div`
+  display: flex;
+  width: ${px2vw(320, 320)};
+  min-height: ${px2vw(200, 320)};
+  flex-direction: column;
+  padding: ${px2vw(20)};
+  margin: ${px2vw(20)};
+  /* background-color: ${globalStyle.backgroundColorMain}; */
+  height: 100%;
+  @font-face {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    src: url();
+  }
+
+  @media (min-width: 1024px) {
+    width: ${px2vw(800)};
+    min-height: ${px2vw(300)};
+    height: 100%;
+  }
+`
+// export const MainContainer = styled.div`
+//   width: 900px;
+//   height: 650px;
+//   border: 1px solid black;
+//   border-radius: 10px;
+// `
