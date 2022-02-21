@@ -34,6 +34,7 @@ const Content: FC<props> = ({ posts, page }) => {
                 <SingleContentElementBottom>workout elem</SingleContentElementBottom>
                 <SingleContentElementBottom>workout elem</SingleContentElementBottom>
               </SingleContentElement>
+              
             </MainContent>
           </UL>
         )

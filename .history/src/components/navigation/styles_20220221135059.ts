@@ -32,7 +32,7 @@ export const NavigationElementCenterContainer = styled.div`
 
   @media (min-width: 1024px) {
     width: ${px2vw(300)};
-    min-height: ${px2vw(100)};
+    min-height: ${px2vw(120)};
     height: 100%;
   }
 `

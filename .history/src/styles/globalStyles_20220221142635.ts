@@ -9,7 +9,8 @@ export const globalStyle = {
     textColor: '#D3D3D3',
     textColorBold: '#696969',
     backgroundColorMain: '#FFFAFA',
-    backgroundColorSecondary: '#DCDCDC',
+    backgroundColorSecondary: 'black',
+    // backgroundColorSecondary: '#F5F5F5',
 
     mainContainerHeight: mainContainerHeight,
     navContanerHeigth: mainContainerHeight / 6,
@@ -24,7 +25,7 @@ export const Global = createGlobalStyle`
     list-style: none;
     background-color: ${globalStyle.backgroundColorMain};
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     overflow-wrap: break-word;
   }
   :root {

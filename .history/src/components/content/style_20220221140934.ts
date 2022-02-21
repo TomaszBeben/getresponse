@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import { globalStyle } from '../../styles/globalStyles';
 import { px2vw } from '../utils/px2vw';
-import backgroundPattern from '../../images/background-fabric.png'
-
-// @media (min-width: 1024px) {
-//   
-// }
 
 export const ListOfContentContainer = styled.div`
     width: 100%;
@@ -29,27 +24,10 @@ export const MainContent = styled.li`
     flex-basis: 100%;
     flex: 1;
     height: ${px2vw(globalStyle.mainContentHeigth)};//main content width: ;
-    @media (min-width: 1024px) {
-      display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    height: ${px2vw(globalStyle.mainContentHeigth)};//main content width: ;
-  }
 `
 
 export const UL = styled.ul`
-    width: ${px2vw(135)}; //width of single elem content
-
-    :hover{
-      outline: 4px solid ${globalStyle.mainColor};
-      outline-offset: -4px;
-   }
-   // @media (min-width: 1024px) {
-//   
-// }
-
-
+    width: ${px2vw(135)};
 `
 
 export const ContentHoursStyle = styled(MainContent)`
@@ -58,23 +36,14 @@ export const ContentHoursStyle = styled(MainContent)`
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-    // @media (min-width: 1024px) {
-//   
-// }
 `
 export const SingleHourElement = styled.p`
     min-height: ${px2vw(84)};
-    background-image: url(${backgroundPattern});
-    // @media (min-width: 1024px) {
-//   
-// }
+    background-color: black;
 `
 export const BorderContentElement = styled.p`
   min-height: ${px2vw(84)};
   background-color: white;
-  // @media (min-width: 1024px) {
-//   
-// }
 `
 
 export const SingleContentElement = styled(BorderContentElement)`
@@ -82,31 +51,10 @@ export const SingleContentElement = styled(BorderContentElement)`
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-  // @media (min-width: 1024px) {
-//   
-// }
 `
 export const SingleContentHeaderElement = styled(BorderContentElement)`
-  font-size: ${px2vw(27)};
-  font-weight: 600;
-  color: ${globalStyle.mainColor};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // @media (min-width: 1024px) {
-//   
-// }
+  height: auto;
 `
-export const SingleContentElementBottom = styled(SingleContentElement)`
-  background-image: url(${backgroundPattern});
-  display: flex;
-  flex-direction: column;
-  flex-basis: 50%;
-  flex: 1;
-  min-height:${px2vw(20)};
-  // @media (min-width: 1024px) {
-//   
-// }
+export const SingleContentElementColored = styled(SingleContentElement)`
 `
-
 

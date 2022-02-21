@@ -6,7 +6,7 @@ import { TPosts } from '../types/TPosts'
 import { POSTS_PER_PAGE } from '../utils/constants'
 import ContentHours from './ContentHours'
 
-import { ListOfContentContainer, MainContent, SingleContentElementBottom, SingleContentHeaderElement , SingleContentElement, UL} from './style'
+import { ListOfContentContainer, MainContent, SingleContentElementColored, SingleContentHeaderElement , SingleContentElement, UL} from './style'
 
 type props = {
   posts: TPosts[];
@@ -31,9 +31,10 @@ const Content: FC<props> = ({ posts, page }) => {
               <SingleContentElement>{elem.Column_4}</SingleContentElement>
               <SingleContentElement>{elem.Column_5}</SingleContentElement>
               <SingleContentElement>
-                <SingleContentElementBottom>workout elem</SingleContentElementBottom>
-                <SingleContentElementBottom>workout elem</SingleContentElementBottom>
+                <SingleContentElementColored>workout elem</SingleContentElementColored>
+                <SingleContentElementColored>workout elem</SingleContentElementColored>
               </SingleContentElement>
+              
             </MainContent>
           </UL>
         )
