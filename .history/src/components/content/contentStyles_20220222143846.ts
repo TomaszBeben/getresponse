@@ -133,7 +133,7 @@ export const SingleContentContainerBottom = styled(SingleContentElement)`
 export const SingleContentElementBottom = styled(SingleContentElement)`
   padding: ${px2vw(0)};
   background-image: url(${backgroundPattern});
-  min-height:${px2vw(90)};
+  min-height:${px2vw(100)};
   display: flex;
   flex-direction: column;
   justify-content: center;
