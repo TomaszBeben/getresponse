@@ -4,7 +4,17 @@ import { TPosts } from '../types/TPosts';
 import { Tcontent } from '../types/Tcontent';
 import { POSTS_PER_PAGE } from '../utils/constants';
 import ContentHours from './ContentHours';
-import { ListOfContentContainer,} from './contentStyles';
+
+import {
+  ListOfContentContainer,
+  MainContent,
+  SingleContentElementText,
+  SingleContentElementBottom,
+  SingleContentHeaderElement ,
+  SingleContentElement,
+  SingleContentContainerBottom,
+  UL}
+from './contentStyles';
 import ContentData from './ContentData';
 
 const Content: FC<Tcontent> = ({ posts, page }) => {
